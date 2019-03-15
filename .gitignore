@@ -1,6 +1,12 @@
 .deps/
 autom4te.cache/
+packaging/root/
 
+*.deb
+*.rpm
+
+build
+copy
 Makefile
 Makefile.in
 aclocal.m4
