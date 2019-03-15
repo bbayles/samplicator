@@ -27,8 +27,8 @@ clean:
 	git clean -dxf
 
 copy:
-	mkdir -p "${TARGET_ROOT}/etc/"
-	cp "samplicator.conf" "${TARGET_ROOT}/etc/"
+	mkdir -p "${TARGET_ROOT}/usr/local/etc/"
+	cp "samplicator.conf" "${TARGET_ROOT}/usr/local/etc/"
 	mkdir -p "${TARGET_ROOT}/etc/systemd/system"
 	cp "samplicator.service" "${TARGET_ROOT}/etc/systemd/system"
 	mkdir -p "${TARGET_ROOT}/usr/local/bin"
@@ -59,7 +59,7 @@ rpm: copy
 		-t rpm \
 		-n "${PACKAGE_NAME}" \
 		-v "${PACKAGE_VERSION}" \
-		-p "packaging/output/{PACKAGE_NAME}-pkg.rpm" \
+		-p "packaging/output/${PACKAGE_NAME}-pkg.rpm" \
 		-a "${ARCH}" \
 		--maintainer "${MAINTAINER}" \
 		--category admin \
