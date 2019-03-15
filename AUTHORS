@@ -29,3 +29,5 @@ Jan Wrona (@jwrona) contributed the OCF Resource Agent script.
 
 Charles Bueche (@cbueche) <bueche@netnea.com> added the systemd
 startup script.
+
+Bo Bayles (@bbayles) added the packaging scripts.
